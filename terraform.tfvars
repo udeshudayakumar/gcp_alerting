@@ -46,6 +46,9 @@ alerting_policy = {
     alignment_period   = "300s"
     per_series_aligner = "ALIGN_MEAN"
   },
+# ------------------------------------------------------
+# | Can be used once optional variables are rolled out |
+# ------------------------------------------------------
 #   "CPU Usage is above 80%" = {
 #     auto_close           = "259200s"
 #     condition_name       = "VM Instance - CPU usage for laz-lob-lam-rnd-aiapp-0864 [MAX]"
@@ -57,5 +60,5 @@ alerting_policy = {
 #     alignment_period     = "300s"
 #     per_series_aligner   = "ALIGN_MEAN"
 #     cross_series_reducer = "REDUCE_MAX"
-#   }
+#   } 
 }

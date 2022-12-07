@@ -26,6 +26,7 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   notification_channels = [google_monitoring_notification_channel.basic.id]
 }
 
+#Can be removed after optional variable feature rolls out
 resource "google_monitoring_alert_policy" "other_alert_policy" {
   display_name = "CPU Usage is above 80%"
   combiner     = "OR"
@@ -33,7 +34,7 @@ resource "google_monitoring_alert_policy" "other_alert_policy" {
     auto_close = "259200s"
   }
   conditions {
-    display_name = "VM Instance - CPU usage for laz-lob-lam-rnd-aiapp-0864 [MAX]"
+    display_name = "VM Instance - CPU usage"
     condition_threshold {
       filter          = "resource.type = \"gce_instance\" AND metric.type = \"compute.googleapis.com/instance/cpu/usage_time\""
       duration        = "300s"

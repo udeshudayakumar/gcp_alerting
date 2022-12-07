@@ -13,7 +13,7 @@ variable "alerting_policy" {
     comparison           = string,
     threshold_value      = string,
     count                = string,
-    # percent              = optional(string),
+    # percent              = optional(string), #Currently in beta, can be used once rolled out 
     alignment_period     = string,
     per_series_aligner   = string,
     # cross_series_reducer = optional(string)
