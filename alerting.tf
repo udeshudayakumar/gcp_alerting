@@ -3,7 +3,7 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   display_name = each.key
   combiner     = "OR"
   alert_strategy {
-    auto_close = each.value.auto_close
+    auto_close = "${each.value.auto_close*86400}s"
   }
   conditions {
     display_name = each.value.condition_name

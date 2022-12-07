@@ -6,7 +6,7 @@ variable "email_address" {
 }
 variable "alerting_policy" {
   type = map(object({
-    auto_close           = string,
+    auto_close           = number,
     condition_name       = string,
     filter               = string,
     duration             = string,
