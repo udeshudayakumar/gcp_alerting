@@ -14,12 +14,12 @@ resource "google_monitoring_alert_policy" "alert_policy" {
       threshold_value = each.value.threshold_value
       trigger {
         count   = each.value.count
-        percent = each.value.percent
+#         percent = each.value.percent
       }
       aggregations {
         alignment_period     = each.value.alignment_period
         per_series_aligner   = each.value.per_series_aligner
-        cross_series_reducer = each.value.cross_series_reducer
+#         cross_series_reducer = each.value.cross_series_reducer
       }
     }
   }
