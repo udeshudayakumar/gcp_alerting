@@ -1,4 +1,8 @@
+terraform {
+  experiments = [module_variable_optional_attrs]
+}
+
 provider "google" {
-  project = var.project_id
+  project = var.scope_project_id
   region  = "us-central1"
 }

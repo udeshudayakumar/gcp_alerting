@@ -1,5 +1,6 @@
-project_id    = "udesh-demobox"
-email_address = "fake_email@blahblah.com"
+scope_project_id      = "udesh-demobox"
+monitoring_project_id = ["sample-test-udesh"]
+email_address         = "fake_email@blahblah.com"
 
 alerting_policy = {
   "VM Instance - Memory is above 85%" = {
@@ -49,16 +50,16 @@ alerting_policy = {
 # ------------------------------------------------------
 # | Can be used once optional variables are rolled out |
 # ------------------------------------------------------
-#   "CPU Usage is above 80%" = {
-#     auto_close           = "3"
-#     condition_name       = "VM Instance - CPU usage for laz-lob-lam-rnd-aiapp-0864 [MAX]"
-#     filter               = "resource.type = \"gce_instance\" AND metric.type = \"compute.googleapis.com/instance/cpu/usage_time\""
-#     duration             = "300s"
-#     comparison           = "COMPARISON_GT"
-#     threshold_value      = "80"
-#     percent              = "80"
-#     alignment_period     = "300s"
-#     per_series_aligner   = "ALIGN_MEAN"
-#     cross_series_reducer = "REDUCE_MAX"
-#   } 
+  "CPU Usage is above 80%" = {
+    auto_close           = "3"
+    condition_name       = "VM Instance - CPU usage for laz-lob-lam-rnd-aiapp-0864 [MAX]"
+    filter               = "resource.type = \"gce_instance\" AND metric.type = \"compute.googleapis.com/instance/cpu/usage_time\""
+    duration             = "300s"
+    comparison           = "COMPARISON_GT"
+    threshold_value      = "80"
+    percent              = "80"
+    alignment_period     = "300s"
+    per_series_aligner   = "ALIGN_MEAN"
+    cross_series_reducer = "REDUCE_MAX"
+  } 
 }
